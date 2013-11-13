@@ -15,4 +15,10 @@ class MyController {
         if(id < 1) id=1
         render text: myService.firstName(id)
     }
+    
+    def modifyFirstName(int id) {
+        if(id < 1) id=1
+        myService.modifyFirstName(id)
+        render text: Person.get(id).firstName
+    }
 }
