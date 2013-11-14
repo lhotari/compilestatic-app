@@ -13,7 +13,7 @@ spawn bash --norc --noprofile
 expect "$ "
 send "rm -rf target\r"
 expect "$ "
-send "grails -plain-output\r"
+send "grails $argv -plain-output\r"
 expect "grails>"
 send "run-app\r"
 expect "grails>"
